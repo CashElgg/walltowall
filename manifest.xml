@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin_manifest>
         <field key="author" value="Cash Costello" />
-        <field key="version" value="1.0" />
-        <field key="description" value="Adds facebook like wall to wall capability to messageboard" />
+        <field key="version" value="1.5" />
+        <field key="description" value="Adds Facebook-like wall to wall capability to messageboard" />
         <field key="website" value="" />
-        <field key="copyright" value="(C) Cash Costello 2008" />
-        <field key="requires" value="mesageboard" />
+        <field key="copyright" value="(C) Cash Costello 2008-2009" />
+        <field key="requires" value="messageboard" />
+        <field key="elgg_version" value="2009022701" />
 </plugin_manifest>

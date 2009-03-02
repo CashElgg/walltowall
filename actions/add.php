@@ -40,6 +40,9 @@
               ); 
           
             system_message(elgg_echo("messageboard:posted"));
+            // add to river
+            add_to_river('river/object/messageboard/create','messageboard',$_SESSION['user']->guid,$user->guid);
+
           
     } else {
             

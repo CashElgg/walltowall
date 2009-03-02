@@ -58,7 +58,7 @@
   else
    $postee_name .= elgg_echo('walltowall:possessive'); 
   
-  $area1 = elgg_view_title( sprintf(elgg_echo('walltowall:heading'), $postee_name, $poster_name) );
+  $area2 = elgg_view_title( sprintf(elgg_echo('walltowall:heading'), $postee_name, $poster_name) );
 
   // include section for adding new message if the viewer is poster or postee
   if ($viewer == $poster || $viewer == $postee && $offset == 0) {
@@ -68,13 +68,13 @@
     // set page owner so any comment added here goes to the correct messageboard
     ( $viewer == $poster ) ? set_page_owner($postee) : set_page_owner($poster);
 
-    $area1 .= elgg_view("walltowall/forms/add", array('poster' => $poster, 'postee' => $postee,) );
+    $area2 .= elgg_view("walltowall/forms/add", array('poster' => $poster, 'postee' => $postee,) );
     
     // back to original page owner if needed downstream
     set_page_owner($orig_page_owner);
   }
     
-  $area1 .= elgg_view("messageboard/messageboard", array('annotation' => $contents));
+  $area2 .= elgg_view("messageboard/messageboard", array('annotation' => $contents));
   
   
   set_context($prev_context);
@@ -87,10 +87,10 @@
                                                   'limit' => $limit,
                                                   ) );
            
-  $area1 .= $nav;
+  $area2 .= $nav;
       
-  // do I want a custom single column layout for wall to wall?
-  $body = elgg_view_layout("one_column", $area1);
+  $body = elgg_view_layout("two_column_left_sidebar", '', $area2);
+
     
   page_draw(elgg_echo('walltowall:title'), $body);    
 ?>
