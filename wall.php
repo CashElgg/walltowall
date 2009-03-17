@@ -71,7 +71,7 @@
   $area2 = elgg_view_title( sprintf(elgg_echo('walltowall:heading'), $postee_name, $poster_name) );
 
   // include section for adding new message if the viewer is poster or postee
-  if ($viewer == $poster || $viewer == $postee && $offset == 0) {
+  if ($offset == 0 && ($viewer == $poster || $viewer == $postee)) {
 
     $orig_page_owner = page_owner();
     
