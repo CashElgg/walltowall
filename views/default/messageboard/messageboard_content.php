@@ -60,7 +60,7 @@
         }  
 
         // if message is viewed by poster or on the board of the poster, don't show reply                
-        if ($viewer != $poster && $poster != $postee) {
+        if (isloggedin() && $viewer != $poster && $poster != $postee) {
                     
           //get the message owner
           $poster_entity = get_entity($poster);
