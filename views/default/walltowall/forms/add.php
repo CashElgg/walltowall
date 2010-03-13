@@ -15,7 +15,7 @@
 <form action="<?php echo $vars['url']; ?>action/walltowall/add" method="post" name="messageboardForm">
    
     <!-- textarea for the contents -->
-    <textarea name="message_content" value="" class="input_textarea" /></textarea><br />
+    <textarea name="message_content" value="" class="input_textarea"></textarea><br />
    
     <!-- the person posting an item on the message board -->
     <input type="hidden" name="guid" value="<?php echo $_SESSION['guid']; ?>"  />
