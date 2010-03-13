@@ -26,6 +26,8 @@
     <input type="hidden" name="poster" value="<?php echo $vars['poster']; ?>" />
 
     <input type="hidden" name="postee" value="<?php echo $vars['postee']; ?>" />
+
+	<?php echo elgg_view('input/securitytoken'); ?>
    
     <!-- submit messages input -->
     <input type="submit" id="postit" value="<?php echo elgg_echo('messageboard:postit'); ?>">
